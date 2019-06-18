@@ -5,3 +5,7 @@ body {
 .funny-text {
   font-family: 'Indie Flower', cursive;
 }
+
+.card {
+  box-shadow: 0px -1px 15px #DDD
+}

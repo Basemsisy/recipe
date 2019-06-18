@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import {recipe} from '../tempDetails';
 export default class RecipeDetails extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      recipe: recipe,
-      url: `https://www.food2fork.com/api/get?key=a9c555a45cf881ea5b214a9bbdc078c1&rId=${this.props.id}`
-    }
+  state = {
+    recipe: recipe,
+    url: `https://www.food2fork.com/api/get?key=17e529937f2f9d75e544a9fdeca11546&rId=${this.props.id}`
   }
   
-  async componentWillMount() {
+  async componentDidMount() {
     try {
       const data = await fetch(this.state.url);
       const jsonData = await data.json();
@@ -21,6 +18,7 @@ export default class RecipeDetails extends Component {
   }
   
   render() {
+    console.log(this.props.id)
     const {image_url, title, publisher, publisher_url, source_url, ingredients} = this.state.recipe
     return (
       <React.Fragment>

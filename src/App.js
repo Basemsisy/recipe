@@ -7,8 +7,8 @@ import RecipeList from './components/RecipeList';
 class App extends Component  {
   state = {
     recipes: recipes,
-    url: "https://www.food2fork.com/api/search?key=a9c555a45cf881ea5b214a9bbdc078c1",
-    base_url: "https://www.food2fork.com/api/search?key=a9c555a45cf881ea5b214a9bbdc078c1",
+    url: "https://www.food2fork.com/api/search?key=17e529937f2f9d75e544a9fdeca11546",
+    base_url: "https://www.food2fork.com/api/search?key=17e529937f2f9d75e544a9fdeca11546",
     id: 4683,
     pageIndex: 0,
     searchKey: "",
@@ -22,7 +22,7 @@ class App extends Component  {
       const jsonData = await data.json();
       if(jsonData.recipes.length === 0) {
         this.setState({error: 'sorry, but your search did\'t retutn anything' })
-      } else {this.setState({recipes: jsonData.recipes})} 
+      } this.setState({recipes: jsonData.recipes})
     }
     catch(error) {
       console.log(error)
