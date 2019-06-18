@@ -3,7 +3,7 @@ import {recipe} from '../tempDetails';
 export default class RecipeDetails extends Component {
   state = {
     recipe: recipe,
-    url: `https://www.food2fork.com/api/get?key=17e529937f2f9d75e544a9fdeca11546&rId=${this.props.id}`
+    url: `https://www.food2fork.com/api/get?key=4a60454c8acfbd8fe9d3266fb213e000=${this.props.id}`
   }
   
   async componentDidMount() {
