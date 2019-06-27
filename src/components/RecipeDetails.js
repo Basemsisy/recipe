@@ -3,7 +3,7 @@ import {recipe} from '../tempDetails';
 export default class RecipeDetails extends Component {
   state = {
     recipe: recipe,
-    url: `https://www.food2fork.com/api/get?key=4a60454c8acfbd8fe9d3266fb213e000=${this.props.id}`
+    url: `https://www.food2fork.com/api/get?key=a9c555a45cf881ea5b214a9bbdc078c1&rId=${this.props.id}`
   }
   
   async componentDidMount() {
@@ -18,7 +18,6 @@ export default class RecipeDetails extends Component {
   }
   
   render() {
-    console.log(this.props.id)
     const {image_url, title, publisher, publisher_url, source_url, ingredients} = this.state.recipe
     return (
       <React.Fragment>
