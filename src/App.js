@@ -13,7 +13,7 @@ class App extends Component  {
     pageIndex: 0,
     searchKey: "",
     query: "&q=",
-    error: ''
+    error: ""
   }
 
   async getRecipes() {
